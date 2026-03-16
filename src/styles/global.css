@@ -202,7 +202,7 @@ main {
 /* ── Hero ─────────────────────────────────────────── */
 .hero {
   padding: 100px 24px 80px;
-  max-width: 800px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -210,6 +210,7 @@ main {
   font-size: 3.2rem;
   margin-bottom: 24px;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .hero p {
@@ -583,6 +584,7 @@ main {
 
   .hero h1 {
     font-size: 2.2rem;
+    white-space: normal;
   }
 
   .hero p {

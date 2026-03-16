@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const demos = [
+  {
+    title: "Gym Booking & Management App",
+    tags: ["Python", "Stripe", "Full-Stack"],
+    description: "A gym needed a way to handle class signups, private session bookings, and payments — all in one place. I built the scheduling system, integrated Stripe for payments, and added a staff dashboard so they could manage everything without calling a developer.",
+  },
+  {
+    title: "StockX Price Scraper",
+    tags: ["Python", "Web Scraping", "Automation"],
+    description: "Manually checking prices across listings is tedious. This scraper runs every night, pulls current pricing data, and sends an alert when something hits your target price. Set it and forget it.",
+  },
+  {
+    title: "AI Menu Assistant",
+    tags: ["Python", "AI", "QR Code"],
+    description: "A restaurant owner wanted to help guests with dietary restrictions without rewriting the entire menu. Now guests scan a QR code at the table and ask the AI anything — 'What's gluten-free?', 'Is this spicy?', 'What do you recommend for someone who doesn't eat pork?'",
+  },
+];
+---
+
+<BaseLayout
+  title="Work — Vincent Del Toral"
+  description="Project demos and walkthroughs from Vincent Del Toral's software engineering consulting work."
+>
+  <section class="section section-narrow">
+    <div class="reveal">
+      <h1 style="font-size: 2.4rem; margin-bottom: 12px;">Work</h1>
+      <p>Each project includes a Loom walkthrough so you can see exactly how it works. I build things that solve real problems for real businesses.</p>
+    </div>
+  </section>
+
+  <section class="section section-narrow" style="padding-top: 0;">
+    {demos.map((demo, i) => (
+      <div class="demo-block reveal" data-delay={String(i * 100)}>
+        <h3>{demo.title}</h3>
+        <div class="demo-tags">
+          {demo.tags.map(tag => (
+            <span class="demo-tag">{tag}</span>
+          ))}
+        </div>
+        <p>{demo.description}</p>
+        <div class="video-embed">
+          <span class="video-placeholder">Walkthrough coming soon</span>
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <section class="cta-banner reveal">
+    <p>Have a project in mind?</p>
+    <a href="/contact" class="btn btn-primary">Let's Talk</a>
+  </section>
+</BaseLayout>
